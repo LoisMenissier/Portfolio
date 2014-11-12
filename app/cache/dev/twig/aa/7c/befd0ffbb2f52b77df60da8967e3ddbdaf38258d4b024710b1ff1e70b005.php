@@ -39,11 +39,35 @@ class __TwigTemplate_aa7cbefd0ffbb2f52b77df60da8967e3ddbdaf38258d4b024710b1ff1e7
         // line 17
         echo $this->env->getExtension('routing')->getPath("portfolio_general_homepage");
         echo "\"><i class=\"fa fa-home\"></i>  Accueil</a></li>
-                <li><a href=\"";
-        // line 18
-        echo $this->env->getExtension('routing')->getPath("fos_user_profile_show");
-        echo "\"><i class=\"fa fa-send-o\"></i>  Login</a></li>
             </ul>
+                <ul class=\"nav navbar-nav navbar-right\">
+                ";
+        // line 20
+        if ($this->env->getExtension('security')->isGranted("IS_AUTHENTICATED_FULLY")) {
+            // line 21
+            echo "                    <li><a class=navbar-brand\" href=\"";
+            echo $this->env->getExtension('routing')->getPath("fos_user_profile_show");
+            echo "\">";
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "username", array()), "html", null, true);
+            echo "</a></li>
+                    <li><a href=\"";
+            // line 22
+            echo $this->env->getExtension('routing')->getPath("fos_user_security_logout");
+            echo "\">
+                        <i class=\"fa fa-send-o\"></i>  ";
+            // line 23
+            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("layout.logout", array(), "FOSUserBundle"), "html", null, true);
+            echo "</a></li>
+                ";
+        } else {
+            // line 25
+            echo "                    <li><a href=\"";
+            echo $this->env->getExtension('routing')->getPath("fos_user_profile_show");
+            echo "\"><i class=\"fa fa-send-o\"></i>  Login</a></li>
+                ";
+        }
+        // line 27
+        echo "                </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
     </div>
@@ -62,6 +86,6 @@ class __TwigTemplate_aa7cbefd0ffbb2f52b77df60da8967e3ddbdaf38258d4b024710b1ff1e7
 
     public function getDebugInfo()
     {
-        return array (  44 => 18,  40 => 17,  31 => 11,  19 => 1,);
+        return array (  70 => 27,  64 => 25,  59 => 23,  55 => 22,  48 => 21,  46 => 20,  40 => 17,  31 => 11,  19 => 1,);
     }
 }
