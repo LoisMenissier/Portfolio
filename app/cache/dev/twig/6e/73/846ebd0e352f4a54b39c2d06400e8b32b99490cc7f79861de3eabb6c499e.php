@@ -1,6 +1,6 @@
 <?php
 
-/* PortfolioUserBundle:Registration:register.html.twig */
+/* FOSUserBundle:Registration:register.html.twig */
 class __TwigTemplate_6e73846ebd0e352f4a54b39c2d06400e8b32b99490cc7f79861de3eabb6c499e extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -33,7 +33,7 @@ class __TwigTemplate_6e73846ebd0e352f4a54b39c2d06400e8b32b99490cc7f79861de3eabb6
 
     public function getTemplateName()
     {
-        return "PortfolioUserBundle:Registration:register.html.twig";
+        return "FOSUserBundle:Registration:register.html.twig";
     }
 
     public function isTraitable()
