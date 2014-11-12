@@ -1,0 +1,3 @@
+portfolio_general_homepage:
+    path:     /
+    defaults: { _controller: portfolioGeneralBundle:Default:index }
