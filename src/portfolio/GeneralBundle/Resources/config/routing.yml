@@ -1,3 +1,8 @@
 portfolio_general_homepage:
     path:     /
     defaults: { _controller: portfolioGeneralBundle:Default:index }
+
+
+portfolio_user_helloworld:
+    path:     /helloworld
+    defaults: { _controller: portfolioGeneralBundle:Hello:index }

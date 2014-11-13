@@ -131,6 +131,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'portfolio\\GeneralBundle\\Controller\\DefaultController::indexAction',  '_route' => 'portfolio_general_homepage',);
         }
 
+        // portfolio_user_helloworld
+        if ($pathinfo === '/helloworld') {
+            return array (  '_controller' => 'portfolio\\GeneralBundle\\Controller\\HelloController::indexAction',  '_route' => 'portfolio_user_helloworld',);
+        }
+
         // portfolio_user_homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {

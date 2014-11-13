@@ -39,39 +39,45 @@ class __TwigTemplate_aa7cbefd0ffbb2f52b77df60da8967e3ddbdaf38258d4b024710b1ff1e7
         // line 17
         echo $this->env->getExtension('routing')->getPath("portfolio_general_homepage");
         echo "\"><i class=\"fa fa-home\"></i>  Accueil</a></li>
+                <li><a href=\"\"><i class=\"fa fa-file-text\"></i>  Projects</a></li>
+                <li><a href=\"\"><i class=\"fa fa-share\"></i>  Contact</a></li>
             </ul>
                 <ul class=\"nav navbar-nav navbar-right\">
                 ";
-        // line 20
+        // line 22
         if ($this->env->getExtension('security')->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 21
+            // line 23
             echo "                    <li class=\"dropdown\">
                         <a href=\"";
-            // line 22
+            // line 24
             echo $this->env->getExtension('routing')->getPath("fos_user_profile_show");
             echo "\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">";
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "username", array()), "html", null, true);
             echo "<span class=\"caret\"></span></a>
                     <ul class=\"dropdown-menu\" role=\"menu\">
                         <li><a href=\"";
-            // line 24
+            // line 26
+            echo $this->env->getExtension('routing')->getPath("fos_user_profile_show");
+            echo "\"><i class=\"fa fa-send-o\"></i>  Profil</a></li>
+                        <li><a href=\"";
+            // line 27
             echo $this->env->getExtension('routing')->getPath("fos_user_security_logout");
             echo "\">
                         <i class=\"fa fa-send-o\"></i>  ";
-            // line 25
+            // line 28
             echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("layout.logout", array(), "FOSUserBundle"), "html", null, true);
             echo "</a></li>
                     </ul>
                     </li>
                 ";
         } else {
-            // line 29
+            // line 32
             echo "                    <li><a href=\"";
             echo $this->env->getExtension('routing')->getPath("fos_user_profile_show");
             echo "\"><i class=\"fa fa-send-o\"></i>  Login</a></li>
                 ";
         }
-        // line 31
+        // line 34
         echo "                </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -91,6 +97,6 @@ class __TwigTemplate_aa7cbefd0ffbb2f52b77df60da8967e3ddbdaf38258d4b024710b1ff1e7
 
     public function getDebugInfo()
     {
-        return array (  75 => 31,  69 => 29,  62 => 25,  58 => 24,  51 => 22,  48 => 21,  46 => 20,  40 => 17,  31 => 11,  19 => 1,);
+        return array (  81 => 34,  75 => 32,  68 => 28,  64 => 27,  60 => 26,  53 => 24,  50 => 23,  48 => 22,  40 => 17,  31 => 11,  19 => 1,);
     }
 }

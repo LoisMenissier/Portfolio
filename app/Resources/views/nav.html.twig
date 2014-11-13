@@ -15,12 +15,15 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="{{ path('portfolio_general_homepage') }}"><i class="fa fa-home"></i>  Accueil</a></li>
+                <li><a href=""><i class="fa fa-file-text"></i>  Projects</a></li>
+                <li><a href=""><i class="fa fa-share"></i>  Contact</a></li>
             </ul>
                 <ul class="nav navbar-nav navbar-right">
                 {% if is_granted("IS_AUTHENTICATED_FULLY") %}
                     <li class="dropdown">
                         <a href="{{ path('fos_user_profile_show') }}" class="dropdown-toggle" data-toggle="dropdown">{{ app.user.username }}<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="{{ path('fos_user_profile_show') }}"><i class="fa fa-send-o"></i>  Profil</a></li>
                         <li><a href="{{ path('fos_user_security_logout') }}">
                         <i class="fa fa-send-o"></i>  {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}</a></li>
                     </ul>
