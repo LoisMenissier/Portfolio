@@ -35,15 +35,9 @@ class __TwigTemplate_c96d817e95c387fa649875398d11dcbfb48eb1e8a5b32b2dbb9cfff5e79
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <center><h1>Welcome on my portfolio ! <br>
-            You can find here all the necessary stuff that involved my coding style during my scolarity. <br>
-            Have a good visit !</h1>
-    </center>
+        echo "    <h1>Welcome on my portfolio !<br>
+        You can find here all the necessary stuff that involved my coding style during my scolarity.<br>
+        Have a good visit !</h1>
 ";
     }
 

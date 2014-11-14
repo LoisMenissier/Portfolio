@@ -2,9 +2,16 @@
 <html>
     <head>
         <meta charset="UTF-8" />
+        <title>{% block title %}{% endblock %} - Mon Portfolio</title>
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"/>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('css/profile.css') }}" type="text/css" media="all" />
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        <div>
+    {% block nav %}{% include '::nav.html.twig'%}{% endblock %}
+        <div id="connected">
             {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                 {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
                 <a href="{{ path('fos_user_security_logout') }}">
@@ -23,9 +30,11 @@
             {% endfor %}
         {% endfor %}
 
-        <div>
+        <div id="content">
             {% block fos_user_content %}
             {% endblock fos_user_content %}
         </div>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     </body>
 </html>

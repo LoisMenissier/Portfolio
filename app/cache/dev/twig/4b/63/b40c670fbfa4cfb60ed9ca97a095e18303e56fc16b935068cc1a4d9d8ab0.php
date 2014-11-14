@@ -35,33 +35,36 @@ class __TwigTemplate_4b63b40c670fbfa4cfb60ed9ca97a095e18303e56fc16b935068cc1a4d9
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("css/bootstrap.min.css"), "html", null, true);
         echo "\"/>
         <link href=\"//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css\" rel=\"stylesheet\">
-        ";
+        <link rel=\"stylesheet\" href=\"";
         // line 9
-        $this->displayBlock('stylesheets', $context, $blocks);
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("css/main.css"), "html", null, true);
+        echo "\" type=\"text/css\" media=\"all\" />
+        ";
         // line 10
+        $this->displayBlock('stylesheets', $context, $blocks);
+        // line 11
         echo "        <link rel=\"icon\" type=\"image/x-icon\" href=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("favicon.ico"), "html", null, true);
         echo "\" />
     </head>
     <body>
         ";
-        // line 13
-        $this->displayBlock('nav', $context, $blocks);
         // line 14
-        echo "        ";
-        $this->displayBlock('body', $context, $blocks);
+        $this->displayBlock('nav', $context, $blocks);
         // line 15
         echo "        ";
-        $this->displayBlock('javascripts', $context, $blocks);
+        $this->displayBlock('body', $context, $blocks);
         // line 16
+        echo "        ";
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 17
         echo "        <script src=\"//code.jquery.com/jquery.min.js\"></script>
         <script src=\"";
-        // line 17
+        // line 18
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     </body>
-</html>
-";
+</html>";
     }
 
     // line 5
@@ -69,23 +72,23 @@ class __TwigTemplate_4b63b40c670fbfa4cfb60ed9ca97a095e18303e56fc16b935068cc1a4d9
     {
     }
 
-    // line 9
+    // line 10
     public function block_stylesheets($context, array $blocks = array())
     {
     }
 
-    // line 13
+    // line 14
     public function block_nav($context, array $blocks = array())
     {
         $this->env->loadTemplate("::nav.html.twig")->display($context);
     }
 
-    // line 14
+    // line 15
     public function block_body($context, array $blocks = array())
     {
     }
 
-    // line 15
+    // line 16
     public function block_javascripts($context, array $blocks = array())
     {
     }
@@ -102,6 +105,6 @@ class __TwigTemplate_4b63b40c670fbfa4cfb60ed9ca97a095e18303e56fc16b935068cc1a4d9
 
     public function getDebugInfo()
     {
-        return array (  89 => 15,  84 => 14,  78 => 13,  73 => 9,  68 => 5,  60 => 17,  57 => 16,  54 => 15,  51 => 14,  49 => 13,  42 => 10,  40 => 9,  35 => 7,  30 => 5,  24 => 1,);
+        return array (  92 => 16,  87 => 15,  81 => 14,  76 => 10,  71 => 5,  64 => 18,  61 => 17,  58 => 16,  55 => 15,  53 => 14,  46 => 11,  44 => 10,  40 => 9,  35 => 7,  30 => 5,  24 => 1,);
     }
 }

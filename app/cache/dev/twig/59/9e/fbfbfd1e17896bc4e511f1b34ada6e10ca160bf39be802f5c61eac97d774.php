@@ -10,6 +10,7 @@ class __TwigTemplate_599efbfbfd1e17896bc4e511f1b34ada6e10ca160bf39be802f5c61eac9
         $this->parent = $this->env->loadTemplate("FOSUserBundle::layout.html.twig");
 
         $this->blocks = array(
+            'title' => array($this, 'block_title'),
             'fos_user_content' => array($this, 'block_fos_user_content'),
         );
     }
@@ -25,9 +26,15 @@ class __TwigTemplate_599efbfbfd1e17896bc4e511f1b34ada6e10ca160bf39be802f5c61eac9
     }
 
     // line 3
+    public function block_title($context, array $blocks = array())
+    {
+        echo "Profile";
+    }
+
+    // line 4
     public function block_fos_user_content($context, array $blocks = array())
     {
-        // line 4
+        // line 5
         $this->env->loadTemplate("FOSUserBundle:Profile:show_content.html.twig")->display($context);
     }
 
@@ -43,6 +50,6 @@ class __TwigTemplate_599efbfbfd1e17896bc4e511f1b34ada6e10ca160bf39be802f5c61eac9
 
     public function getDebugInfo()
     {
-        return array (  31 => 4,  28 => 3,);
+        return array (  38 => 5,  35 => 4,  29 => 3,);
     }
 }
