@@ -1,3 +1,7 @@
+portfolio_project:
+    resource: "@portfolioProjectBundle/Resources/config/routing.yml"
+    prefix:   /
+
 portfolio_general:
     resource: "@portfolioGeneralBundle/Resources/config/routing.yml"
     prefix:   /

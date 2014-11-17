@@ -122,6 +122,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // portfolio_project_homepage
+        if ($pathinfo === '/projects') {
+            return array (  '_controller' => 'portfolio\\ProjectBundle\\Controller\\DefaultController::indexAction',  '_route' => 'portfolio_project_homepage',);
+        }
+
         // portfolio_general_homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {

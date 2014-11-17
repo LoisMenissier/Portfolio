@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new portfolio\GeneralBundle\portfolioGeneralBundle(),
             new Portfolio\UserBundle\PortfolioUserBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new portfolio\ProjectBundle\portfolioProjectBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

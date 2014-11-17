@@ -39,7 +39,10 @@ class __TwigTemplate_aa7cbefd0ffbb2f52b77df60da8967e3ddbdaf38258d4b024710b1ff1e7
         // line 17
         echo $this->env->getExtension('routing')->getPath("portfolio_general_homepage");
         echo "\"><i class=\"fa fa-home\"></i>  Accueil</a></li>
-                <li><a href=\"\"><i class=\"fa fa-file-text\"></i>  Projects</a></li>
+                <li><a href=\"";
+        // line 18
+        echo $this->env->getExtension('routing')->getPath("portfolio_project_homepage");
+        echo "\"><i class=\"fa fa-file-text\"></i>  Projects</a></li>
                 <li><a href=\"\"><i class=\"fa fa-share\"></i>  Contact</a></li>
             </ul>
                 <ul class=\"nav navbar-nav navbar-right\">
@@ -97,6 +100,6 @@ class __TwigTemplate_aa7cbefd0ffbb2f52b77df60da8967e3ddbdaf38258d4b024710b1ff1e7
 
     public function getDebugInfo()
     {
-        return array (  81 => 34,  75 => 32,  68 => 28,  64 => 27,  60 => 26,  53 => 24,  50 => 23,  48 => 22,  40 => 17,  31 => 11,  19 => 1,);
+        return array (  84 => 34,  78 => 32,  71 => 28,  67 => 27,  63 => 26,  56 => 24,  53 => 23,  51 => 22,  44 => 18,  40 => 17,  31 => 11,  19 => 1,);
     }
 }

@@ -19,6 +19,7 @@
       <parameter key="portfolioGeneralBundle">portfolio\GeneralBundle\portfolioGeneralBundle</parameter>
       <parameter key="PortfolioUserBundle">Portfolio\UserBundle\PortfolioUserBundle</parameter>
       <parameter key="FOSUserBundle">FOS\UserBundle\FOSUserBundle</parameter>
+      <parameter key="portfolioProjectBundle">portfolio\ProjectBundle\portfolioProjectBundle</parameter>
       <parameter key="AcmeDemoBundle">Acme\DemoBundle\AcmeDemoBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -1945,6 +1946,12 @@
         <argument>zh_CN</argument>
         <argument>validators</argument>
       </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>C:\wamp\www\portfolio\src\portfolio\ProjectBundle/Resources/translations\messages.fr.xlf</argument>
+        <argument>fr</argument>
+        <argument>messages</argument>
+      </call>
     </service>
     <service id="translation.loader.php" class="Symfony\Component\Translation\Loader\PhpFileLoader">
       <tag name="translation.loader" alias="php"/>
@@ -2923,7 +2930,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>54648c8a658d9</argument>
+            <argument>54660db63a6cc</argument>
           </service>
         </argument>
       </argument>
@@ -3193,7 +3200,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.context"/>
-            <argument>54648c8a658d9</argument>
+            <argument>54660db63a6cc</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
           </service>
         </argument>
@@ -4249,6 +4256,10 @@
       <call method="addPath">
         <argument>C:\wamp\www\portfolio\vendor\friendsofsymfony\user-bundle/Resources/views</argument>
         <argument>FOSUser</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp\www\portfolio\src\portfolio\ProjectBundle/Resources/views</argument>
+        <argument>portfolioProject</argument>
       </call>
       <call method="addPath">
         <argument>C:\wamp\www\portfolio\src\Acme\DemoBundle/Resources/views</argument>
