@@ -43,7 +43,10 @@ class __TwigTemplate_aa7cbefd0ffbb2f52b77df60da8967e3ddbdaf38258d4b024710b1ff1e7
         // line 18
         echo $this->env->getExtension('routing')->getPath("portfolio_project_homepage");
         echo "\"><i class=\"fa fa-file-text\"></i>  Projects</a></li>
-                <li><a href=\"\"><i class=\"fa fa-share\"></i>  Contact</a></li>
+                <li><a href=\"";
+        // line 19
+        echo $this->env->getExtension('routing')->getPath("mremi_contact_form");
+        echo "\"><i class=\"fa fa-share\"></i>  Contact</a></li>
             </ul>
                 <ul class=\"nav navbar-nav navbar-right\">
                 ";
@@ -100,6 +103,6 @@ class __TwigTemplate_aa7cbefd0ffbb2f52b77df60da8967e3ddbdaf38258d4b024710b1ff1e7
 
     public function getDebugInfo()
     {
-        return array (  84 => 34,  78 => 32,  71 => 28,  67 => 27,  63 => 26,  56 => 24,  53 => 23,  51 => 22,  44 => 18,  40 => 17,  31 => 11,  19 => 1,);
+        return array (  87 => 34,  81 => 32,  74 => 28,  70 => 27,  66 => 26,  59 => 24,  56 => 23,  54 => 22,  48 => 19,  44 => 18,  40 => 17,  31 => 11,  19 => 1,);
     }
 }

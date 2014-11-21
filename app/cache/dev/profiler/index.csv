@@ -19,3 +19,8 @@ b6d300,::1,GET,http://localhost/portfolio/web/app_dev.php/contact/confirmation,1
 6dc55d,::1,GET,http://localhost/portfolio/web/app_dev.php/contact,1416573497,
 3e7e4f,::1,POST,http://localhost/portfolio/web/app_dev.php/contact,1416573507,
 5cce56,::1,GET,http://localhost/portfolio/web/app_dev.php/contact/confirmation,1416573508,
+537a2d,::1,GET,http://localhost/portfolio/web/app_dev.php/,1416573630,
+2ff38c,::1,GET,http://localhost/portfolio/web/app_dev.php/,1416573748,
+a09a8e,::1,GET,http://localhost/portfolio/web/app_dev.php/contact,1416573750,
+a21ae0,::1,GET,http://localhost/portfolio/web/app_dev.php/,1416573755,
+97be8e,::1,GET,http://localhost/portfolio/web/app_dev.php/contact,1416573756,
