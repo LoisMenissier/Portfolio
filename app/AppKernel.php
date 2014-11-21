@@ -20,6 +20,8 @@ class AppKernel extends Kernel
             new Portfolio\UserBundle\PortfolioUserBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new portfolio\ProjectBundle\portfolioProjectBundle(),
+            new Mremi\ContactBundle\MremiContactBundle(),
+            new Genemu\Bundle\FormBundle\GenemuFormBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

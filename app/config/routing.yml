@@ -13,3 +13,6 @@ portfolio_user:
 # app/config/routing.yml
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+mremi_contact_form:
+    resource: "@MremiContactBundle/Resources/config/routing.xml"

@@ -312,6 +312,25 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
         not_fos_user_change_password:
 
+        if (0 === strpos($pathinfo, '/contact')) {
+            // mremi_contact_form
+            if ($pathinfo === '/contact') {
+                return array (  '_controller' => 'mremi_contact.contact_controller:indexAction',  '_route' => 'mremi_contact_form',);
+            }
+
+            // mremi_contact_confirmation
+            if ($pathinfo === '/contact/confirmation') {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_mremi_contact_confirmation;
+                }
+
+                return array (  '_controller' => 'mremi_contact.contact_controller:confirmAction',  '_route' => 'mremi_contact_confirmation',);
+            }
+            not_mremi_contact_confirmation:
+
+        }
+
         // _welcome
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {

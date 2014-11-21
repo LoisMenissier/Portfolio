@@ -76,3 +76,20 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
     user_class: Portfolio\UserBundle\Entity\User
+
+mremi_contact:
+    store_data:            false
+    contact_class:         Mremi\ContactBundle\Model\Contact
+
+    form:
+        type:              mremi_contact
+        name:              contact_form
+        validation_groups: [Default]
+        subject_provider:  mremi_contact.subject_provider.noop
+        captcha_disabled:  true
+        captcha_type:      genemu_captcha # or genemu_recaptcha
+
+    email:
+        mailer:            mremi_contact.mailer.twig_swift
+        recipient_address: lois.menissier@gmail.com
+        template:          MremiContactBundle:Contact:email.txt.twig

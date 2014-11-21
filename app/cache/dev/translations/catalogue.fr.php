@@ -100,6 +100,27 @@ $catalogue = new MessageCatalogue('fr', array (
     'fos_user.group.blank' => 'Entrez un nom s\'il vous plait',
     'fos_user.group.short' => '[-Inf,Inf]Le nom est trop court',
     'fos_user.group.long' => '[-Inf,Inf]Le nom est trop long',
+    'mremi_contact.title.blank' => 'Merci de sélectionner votre civilité',
+    'mremi_contact.first_name.blank' => 'Merci de saisir votre prénom',
+    'mremi_contact.first_name.short' => '[-Inf,Inf]Votre prénom est trop court',
+    'mremi_contact.first_name.long' => '[-Inf,Inf]Votre prénom est trop long',
+    'mremi_contact.last_name.blank' => 'Merci de saisir votre nom',
+    'mremi_contact.last_name.short' => '[-Inf,Inf]Votre nom est trop court',
+    'mremi_contact.last_name.long' => '[-Inf,Inf]Votre nom est trop long',
+    'mremi_contact.email.blank' => 'Merci de saisir votre adresse e-mail',
+    'mremi_contact.email.short' => '[-Inf,Inf]Votre adresse e-mail est trop courte',
+    'mremi_contact.email.long' => '[-Inf,Inf]Votre adresse e-mail est trop longue',
+    'mremi_contact.email.invalid' => 'Votre adresse e-mail est invalide',
+    'mremi_contact.subject.blank' => 'Merci de saisir un sujet',
+    'mremi_contact.subject.short' => '[-Inf,Inf]Votre sujet est trop court',
+    'mremi_contact.subject.long' => '[-Inf,Inf]Votre sujet est trop long',
+    'mremi_contact.message.blank' => 'Merci de saisir un message',
+    'mremi_contact.message.short' => '[-Inf,Inf]Votre message est trop court',
+    'mremi_contact.message.long' => '[-Inf,Inf]Votre message est trop long',
+    'mremi_contact.created_at.invalid' => 'La date de création est invalide',
+    'The captcha is invalid.' => 'Le captcha est invalide.',
+    'genemu_form.recaptcha.incorrect-captcha-sol' => 'Le captcha n\'est pas valide.',
+    'genemu_form.recaptcha.invalid-site-private-key' => 'La clé privée est invalide.',
   ),
   'security' => 
   array (
@@ -182,6 +203,66 @@ L\'équipe.
     'form.password_confirmation' => 'Vérification :',
     'form.new_password' => 'Nouveau mot de passe :',
     'form.new_password_confirmation' => 'Vérification :',
+  ),
+  'MremiContactBundle' => 
+  array (
+    'mremi_contact.form_page_title' => 'Contact',
+    'mremi_contact.form_title' => 'Formulaire de contact',
+    'mremi_contact.form.title' => 'Civilité',
+    'mremi_contact.form.title_mr' => 'M.',
+    'mremi_contact.form.title_mrs' => 'Mme',
+    'mremi_contact.form.first_name' => 'Prénom',
+    'mremi_contact.form.last_name' => 'Nom',
+    'mremi_contact.form.email' => 'E-mail',
+    'mremi_contact.form.subject' => 'Sujet',
+    'mremi_contact.form.message' => 'Commentaires',
+    'mremi_contact.form.captcha' => 'Code sécurité',
+    'mremi_contact.form_submit' => 'Envoyer',
+    'mremi_contact.email_message_txt' => 'Bonjour,
+
+Un internaute a fait une demande de contact :
+
+Civilité : %title%
+
+Prénom : %firstName%
+
+Nom : %lastName%
+
+E-mail : %email%
+
+Commentaires :
+%message%
+
+Cordialement
+',
+    'mremi_contact.email_message_html' => 'Bonjour,
+<br/>
+<br/>
+Un internaute a fait une demande de contact :
+<br/>
+<br/>
+<strong><em>Civilité :</em></strong> %title%
+<br/>
+<br/>
+<strong><em>Prénom :</em></strong> %firstName%
+<br/>
+<br/>
+<strong><em>Nom :</em></strong> %lastName%
+<br/>
+<br/>
+<strong><em>E-mail :</em></strong> %email%
+<br/>
+<br/>
+<strong><em>Commentaires :</em></strong>
+<br/>
+%message%
+<br/>
+<br/>
+Cordialement
+',
+    'mremi_contact.confirm_page_title' => 'Confirmation',
+    'mremi_contact.confirm_title' => 'Merci %title% %fullName%',
+    'mremi_contact.confirm_message' => 'Votre demande a été transmise et sera prise en compte rapidement.',
   ),
 ));
 
